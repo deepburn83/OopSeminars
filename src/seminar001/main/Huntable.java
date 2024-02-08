@@ -1,2 +1,4 @@
-package seminar001.main;public interface Huntable {
+package seminar001.main;
+
+public interface Huntable {
 }

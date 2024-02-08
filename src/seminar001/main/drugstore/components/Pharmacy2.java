@@ -1,10 +1,12 @@
-package seminar001.main.drugstore;
+package seminar001.main.drugstore.components;
+
+import seminar001.main.drugstore.Component;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class Pharmacy implements Iterator<Component> {
+public class Pharmacy2 implements Iterable<Component> {
     private List<Component> components = new ArrayList<>();
     private int index = 0; // можно не писать = 0
 
@@ -14,13 +16,28 @@ public class Pharmacy implements Iterator<Component> {
         }
     }
 
-    @Override
-    public boolean hasNext() {
-        return index < components.size();
-    }
+//    @Override
+//    public boolean hasNext() {
+//        return index < components.size();
+//    }
+//
+//    @Override
+//    public Component next() {
+//        return components.get(index++);
+//    }
 
     @Override
-    public Component next() {
-        return components.get(index++);
+    public Iterator<Component> iterator() {
+        return new Iterator<Component>() { // todo возращаем итератор с помощью анонимного класса
+            @Override
+            public boolean hasNext() {
+                return index < components.size();
+            }
+
+            @Override
+            public Component next() {
+                return components.get(index++);
+            }
+        };
     }
 }

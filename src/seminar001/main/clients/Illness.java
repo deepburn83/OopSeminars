@@ -1,4 +1,4 @@
-package seminar001.main;
+package seminar001.main.clients;
 
 public class Illness {
     String title;

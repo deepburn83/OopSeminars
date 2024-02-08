@@ -1,12 +1,12 @@
-package seminar001.main;
+package seminar001.main.clients;
 
 import java.time.LocalDate;
 
-public class Animal {
-    private String nickName;
-    private Owner owner;
-    private LocalDate birthDate;
-    private Illness illness;
+public abstract class Animal { // Абстрактный класс
+    protected String nickName; // поле объявленное как protected будет видно внутри класса и во всех его наследниках
+    protected Owner owner;
+    protected LocalDate birthDate;
+    protected Illness illness;
 
     // Конструктор
     public Animal(String nickName, Owner owner, LocalDate birthDate, Illness illness) {
@@ -40,12 +40,12 @@ public class Animal {
         this.illness = illness;
     }
 
-    public void lifeCircle() {
-        wakeUp("12:00");
-        hunt();
-        eat();
-        sleep();
-    }
+//    public void lifeCircle() {
+//        wakeUp("12:00");
+//        hunt();
+//        eat();
+//        sleep();
+//    }
 
     private void wakeUp() {
         System.out.println("Животное проснулось");
@@ -59,19 +59,37 @@ public class Animal {
         System.out.println("Животное охотится");
     }
 
-    private void eat() {
-        System.out.println("Животное ест");
-
-    }
+    public abstract void eat();
 
     private void sleep() {
         System.out.println("Животное уснуло");
 
     }
 
+    public void go() {
+        System.out.println(getType() + "Животное двигается/ходит");
+    }
+    public void fly() {
+        System.out.println(getType() + "Животное летает");
+    }
+    public void swim() {
+        System.out.println(getType() + "Животное плавает");
+    }
+
     public String getType() {
         return getClass().getSimpleName();
     }
+
+    public void action() {
+        if (this instanceof Bird) {
+            fly();
+        } else if (this instanceof Fish) {
+            swim();
+        } else {
+            System.out.println("Это животное не умеет летать и плавать");
+        }
+    }
+
 
     @Override
     public String toString() {

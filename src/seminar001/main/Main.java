@@ -1,25 +1,54 @@
-package seminar001.main.clients;
+package seminar001.main;
+
+import seminar001.main.clients.*;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
         // Создаем экземпляр класса
-        Animal cat = new Animal("Босс", new Owner("Вася Пупкин"),
-                LocalDate.of(2021, 10, 5), new Illness("Бешенство"));
-        System.out.println(cat.getOwner());
-        System.out.println(cat.getNickName());
-        cat.setIllness(new Illness(null));
-        System.out.println(cat.getIllness());
+//        Animal cat = new Cat("Босс", new Owner("Вася Пупкин"),
+//                LocalDate.of(2021, 10, 5), new Illness("Бешенство"), 10D);
+        Animal goldFish = new Fish
+                ("Золотко", new Owner("Мария Ивановна"),
+                        LocalDate.of(2022, 11, 11) , new Illness("Здорова"));
 
-        Animal testAnimal = new Animal();
-        System.out.println(testAnimal.getNickName());
+        goldFish.action();
+        goldFish.fly();
+        goldFish.go();
 
-        cat.lifeCircle();
-
-        System.out.println(cat.getType());
-        System.out.println(cat);
-
-
+//        System.out.println(cat.getOwner());
+//        System.out.println(cat.getNickName());
+//        cat.setIllness(new Illness(null));
+//        System.out.println(cat.getIllness());
+//
+//        //Animal testAnimal = new Animal();
+//        //System.out.println(testAnimal.getNickName());
+//
+//        //cat.lifeCircle();
+//
+//        System.out.println(cat.getType());
+//        System.out.println(cat);
+//
+//        Animal catty = new Cat();
+//        Dog goodBoy = new Dog();
+//
+//        System.out.println(catty.getType());
+//        System.out.println(goodBoy.getType());
+//
+//        System.out.println(catty);
+//
+//        List<Animal> animals = new ArrayList<>();
+//        animals.add(catty);
+//        animals.add(goodBoy);
+//        animals.add(cat);
+//
+//        int i = 0;
+//        for (Animal animal : animals){
+//            System.out.println((i + " " + animal));
+//            i++;
+//        }
     }
 }

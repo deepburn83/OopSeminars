@@ -1,7 +1,7 @@
-package seminar001.main.list.imple;
+package seminar001.main.list.core.imple;
 
 import seminar001.main.list.ArrayIterator;
-import seminar001.main.list.GBList;
+import seminar001.main.list.core.GBList;
 
 import java.util.Iterator;
 

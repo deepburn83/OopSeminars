@@ -1,4 +1,4 @@
-package seminar001.main.list;
+package seminar001.main.list.core;
 
 public interface GBList<T> extends Iterable<T> {
     void add(T elem);
