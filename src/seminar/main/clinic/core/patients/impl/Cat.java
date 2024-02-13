@@ -22,11 +22,6 @@ public class Cat extends Animal implements Goable, Huntable {
         System.out.println("Поймала мышку и ест!");
     }
 
-     @Override
-    public double go() {
-        System.out.println("Кошка идёт");
-         return 0;
-     }
 
     @Override
     public double getRunSpeed() {

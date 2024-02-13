@@ -29,13 +29,7 @@ public class Dog extends Animal implements Goable, Huntable {
 
     @Override
     public void eat() {
-        System.out.println("Собака ест!");
-    }
 
-    @Override
-    public double go() {
-        System.out.println("Собака идёт");
-        return 0;
     }
 
     @Override

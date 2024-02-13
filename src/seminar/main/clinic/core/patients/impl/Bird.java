@@ -21,7 +21,6 @@ public class Bird extends Animal implements Goable, Flyable {
     public void eat() {
         System.out.println("Птица ест");
     }
-
     @Override
     public void swim() {
         System.out.println("Птица плавает");

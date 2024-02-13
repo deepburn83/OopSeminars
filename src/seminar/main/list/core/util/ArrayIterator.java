@@ -1,10 +1,10 @@
-package seminar.main.list;
+package seminar.main.list.core.util;
 
 import java.util.Iterator;
 
 public class ArrayIterator<E> implements Iterator<E> {
     private E[] values;
-    int index;
+    private int index;
 
 
     public ArrayIterator(E[] values) {

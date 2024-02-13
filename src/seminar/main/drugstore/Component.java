@@ -5,11 +5,18 @@ public abstract class Component implements Comparable<Component>{
     private Double weight;
     private int power;
 
-    // Construct (вызывается с помощью Alt+Insert)
     public Component(String title, Double weight, int power) {
         this.title = title;
         this.weight = weight;
         this.power = power;
+    }
+
+    public int getPower() {
+        return power;
+    }
+
+    public Double getWeight() {
+        return weight;
     }
 
     @Override
@@ -19,9 +26,8 @@ public abstract class Component implements Comparable<Component>{
 
     @Override
     public int compareTo(Component o) {
-//        return this.power - o.power;
-        return Integer.compare(this.power, o.power);
 
+//        1-й вариант
 //        if(this.power < o.power){
 //            return -1;
 //        }
@@ -29,5 +35,11 @@ public abstract class Component implements Comparable<Component>{
 //            return 1;
 //        }
 //        else return 0;
+
+//        2-й вариант
+//        return this.power - o.power;
+
+//        3-й вариант (логика 2-го варианта короткой записью)
+        return Integer.compare(this.power, o.power);
     }
 }
