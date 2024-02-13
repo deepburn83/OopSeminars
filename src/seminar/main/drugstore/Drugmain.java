@@ -3,6 +3,8 @@ package seminar.main.drugstore;
 import seminar.main.drugstore.components.Water;
 import seminar.main.drugstore.components.Azitronite;
 import seminar.main.drugstore.components.Penicillin;
+import seminar.main.drugstore.core.Component;
+import seminar.main.drugstore.core.Medicament;
 
 import java.util.*;
 

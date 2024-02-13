@@ -1,4 +1,4 @@
-package seminar.main.drugstore;
+package seminar.main.drugstore.core;
 
 import java.util.ArrayList;
 import java.util.Collections;

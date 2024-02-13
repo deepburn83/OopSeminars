@@ -1,4 +1,4 @@
-package seminar.main.drugstore;
+package seminar.main.drugstore.core;
 
 public abstract class Component implements Comparable<Component>{
     private String title;
