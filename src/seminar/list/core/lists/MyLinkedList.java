@@ -24,6 +24,11 @@ public class MyLinkedList<T> implements GBLinkedList<T> {
         this.size = 0;
     }
 
+    private void checkIndex(int index) {
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException("Index is out of bounds");
+        }
+    }
     @Override
     public void addFirst(T elem) {
         Node<T> newNode = new Node<>(elem);
@@ -54,9 +59,7 @@ public class MyLinkedList<T> implements GBLinkedList<T> {
 
     @Override
     public void remove(int index) {
-        if (index < 0 || index >= size) {
-            throw new IndexOutOfBoundsException("Index is out of bounds");
-        }
+        checkIndex(index);
         if (index == 0) {
             head = head.next;
             if (head == null) {
@@ -77,9 +80,7 @@ public class MyLinkedList<T> implements GBLinkedList<T> {
 
     @Override
     public T get(int index) {
-        if (index < 0 || index >= size) {
-            throw new IndexOutOfBoundsException("Index is out of bounds");
-        }
+        checkIndex(index);
         Node<T> current = head;
         for (int i = 0; i < index; i++) {
             current = current.next;
